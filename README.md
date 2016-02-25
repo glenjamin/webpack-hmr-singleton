@@ -22,6 +22,8 @@ var thing = single(module, 'thing', function() {
 
 On the first run, the function will be called and `single` will return the object you've specified. After every hot reload the function won't be called and you'll just get the first one back again.
 
+This is only really useful if the value is something mutable, that you modify during the running of your program, and want it to stick around after a hot reload.
+
 ## Docs
 
 ### single(module, key, fn)

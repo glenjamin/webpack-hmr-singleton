@@ -37,10 +37,39 @@ describe('webpack-hmr-singleton', function() {
   });
 
   describe('HMR', function() {
-    it('should not accept HMRs');
-    it('should return function result');
-    it('should return same result on second go');
-    it('should remember value on dispose');
+    var module, accept;
+    beforeEach(function() {
+      accept = false;
+      diposals = [];
+      module = {
+        hot: {
+          accept: function() { accept = true; },
+          dispose: function(f) { diposals.push(f); },
+          apply: function() {
+            module.hot.data = {};
+            diposals.forEach(function(f) { f(module.hot.data); });
+          }
+        }
+      };
+    });
+    it('should not accept HMRs', function() {
+      single(module, 'X', returns(123));
+      assert.equal(accept, false);
+    });
+    it('should return function result', function() {
+      var obj = {};
+      var result = single(module, 'X', returns(obj));
+      assert.strictEqual(result, obj);
+    });
+    it('should return same result on second go', function() {
+      var f = function() { return { a: 1 }; };
+      var first = single(module, 'X', f);
+
+      module.hot.apply();
+
+      var second = single(module, 'X', f);
+      assert.strictEqual(first, second);
+    });
   });
 
 });
