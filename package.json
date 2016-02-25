@@ -1,0 +1,30 @@
+{
+  "name": "webpack-hmr-singleton",
+  "version": "1.0.0",
+  "description": "Utility lib to help define a hot-reloadable singleton",
+  "main": "singleton.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glenjamin/webpack-hmr-singleton.git"
+  },
+  "keywords": [
+    "hmr",
+    "webpack",
+    "hot",
+    "reload",
+    "singleton",
+    "defonce"
+  ],
+  "author": "Glen Mailer <glen@stainlessed.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glenjamin/webpack-hmr-singleton/issues"
+  },
+  "homepage": "https://github.com/glenjamin/webpack-hmr-singleton#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
