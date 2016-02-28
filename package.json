@@ -1,6 +1,6 @@
 {
   "name": "webpack-hmr-singleton",
-  "version": "1.0.0-dev",
+  "version": "1.0.0",
   "description": "Utility lib to help define a hot-reloadable singleton",
   "main": "singleton.js",
   "scripts": {
