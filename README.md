@@ -2,6 +2,8 @@
 
 Utility lib to help define a hot-reloadable singleton
 
+[![npm version](https://img.shields.io/npm/v/webpack-hmr-singleton.svg)](https://www.npmjs.com/package/webpack-hmr-singleton) [![Build Status](https://img.shields.io/travis/glenjamin/webpack-hmr-singleton/master.svg)](https://travis-ci.org/glenjamin/webpack-hmr-singleton) ![MIT Licensed](https://img.shields.io/npm/l/webpack-hmr-singleton.svg)
+
 If you want something fancier, you might want to try [ud](https://www.npmjs.com/package/ud). This goal of this lib is to remain very small in scope, bytes and dependencies.
 
 ## Install
